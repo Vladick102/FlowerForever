@@ -2,17 +2,19 @@ package ua.edu.ucu.apps.item;
 
 public class BasketDecorator extends ItemDecorator {
 
-  public BasketDecorator(Item item) {
-    super(item);
-  }
+    final int PRICE = 10;
 
-  @Override
-  public int getPrice() {
-    return 10 + super.getPrice();
-  }
+    public BasketDecorator(Item item) {
+        super(item);
+    }
 
-  @Override
-  public String getDescription() {
-    return "Decorated with basket.";
-  }
+    @Override
+    public int getPrice() {
+        return PRICE + super.getPrice();
+    }
+
+    @Override
+    public String getDescription() {
+        return "Decorated with basket.";
+    }
 }

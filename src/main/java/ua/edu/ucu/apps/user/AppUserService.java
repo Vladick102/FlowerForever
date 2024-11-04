@@ -1,4 +1,4 @@
-package ua.edu.ucu.apps.appUser;
+package ua.edu.ucu.apps.user;
 
 import org.apache.coyote.BadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;

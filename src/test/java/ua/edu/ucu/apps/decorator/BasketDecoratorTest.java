@@ -1,14 +1,15 @@
-package ua.edu.ucu.apps.DecoratorTests;
+package ua.edu.ucu.apps.decorator;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ua.edu.ucu.apps.item.BasketDecorator;
 import ua.edu.ucu.apps.item.Item;
-import ua.edu.ucu.apps.item.RibbonDecorator;
 
-class RibbonDecoratorTest {
+class BasketDecoratorTest {
 
+  final int PRICE = 110;
   private Item item;
 
   @BeforeEach
@@ -28,13 +29,13 @@ class RibbonDecoratorTest {
 
   @Test
   void testGetPrice() {
-    Item decoratedItem = new RibbonDecorator(item);
-    assertEquals(130, decoratedItem.getPrice());
+    Item decoratedItem = new BasketDecorator(item);
+    Assertions.assertEquals(PRICE, decoratedItem.getPrice());
   }
 
   @Test
   void testGetDescription() {
-    Item decoratedItem = new RibbonDecorator(item);
-    assertEquals("Decorated with basket.", decoratedItem.getDescription());
+    Item decoratedItem = new BasketDecorator(item);
+    Assertions.assertEquals("Decorated with basket.", decoratedItem.getDescription());
   }
 }

@@ -1,4 +1,4 @@
-package ua.edu.ucu.apps.appUser;
+package ua.edu.ucu.apps.user;
 
 
 import java.time.LocalDate;
@@ -25,10 +25,10 @@ import lombok.ToString;
 @NoArgsConstructor
 public class AppUser {
   @Column(unique = true)
-  String email;
+  private String email;
   @Transient
-  int age;
-  LocalDate dateOfBirth;
+  private int age;
+  private LocalDate dateOfBirth;
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;

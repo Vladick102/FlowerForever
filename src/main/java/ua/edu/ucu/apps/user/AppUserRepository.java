@@ -1,4 +1,4 @@
-package ua.edu.ucu.apps.appUser;
+package ua.edu.ucu.apps.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
