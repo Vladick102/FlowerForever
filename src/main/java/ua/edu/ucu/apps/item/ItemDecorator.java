@@ -2,14 +2,14 @@ package ua.edu.ucu.apps.item;
 
 public class ItemDecorator extends Item {
 
-  private Item item;
+    private Item item;
 
-  ItemDecorator(Item item) {
-    this.item = item;
-  }
+    ItemDecorator(Item item) {
+        this.item = item;
+    }
 
-  @Override
-  public int getPrice() {
-    return item.getPrice();
-  }
+    @Override
+    public int getPrice() {
+        return item.getPrice();
+    }
 }

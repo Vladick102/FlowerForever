@@ -6,7 +6,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public abstract class Item {
-  private int price;
-  private String description;
+    private int price;
+    private String description;
 
 }

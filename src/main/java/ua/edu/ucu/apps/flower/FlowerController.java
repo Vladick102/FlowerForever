@@ -11,20 +11,20 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "/flower")
 public class FlowerController {
-  private final FlowerService flowerService;
+    private final FlowerService flowerService;
 
-  @Autowired
-  public FlowerController(FlowerService flowerService) {
-    this.flowerService = flowerService;
-  }
+    @Autowired
+    public FlowerController(FlowerService flowerService) {
+        this.flowerService = flowerService;
+    }
 
-  @GetMapping
-  public List<Flower> getFlowers() {
-    return flowerService.getFlowers();
-  }
+    @GetMapping
+    public List<Flower> getFlowers() {
+        return flowerService.getFlowers();
+    }
 
-  @PostMapping
-  public void addFlower(@RequestBody Flower flower) {
-    flowerService.addFlower(flower);
-  }
+    @PostMapping
+    public void addFlower(@RequestBody Flower flower) {
+        flowerService.addFlower(flower);
+    }
 }

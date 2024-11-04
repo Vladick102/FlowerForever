@@ -7,18 +7,18 @@ import java.util.List;
 
 @Service
 public class FlowerService {
-  private FlowerRepository flowerRepository;
+    private FlowerRepository flowerRepository;
 
-  @Autowired
-  public FlowerService(FlowerRepository flowerRepository) {
-    this.flowerRepository = flowerRepository;
-  }
+    @Autowired
+    public FlowerService(FlowerRepository flowerRepository) {
+        this.flowerRepository = flowerRepository;
+    }
 
-  public List<Flower> getFlowers() {
-    return flowerRepository.findAll();
-  }
+    public List<Flower> getFlowers() {
+        return flowerRepository.findAll();
+    }
 
-  public void addFlower(Flower flower) {
-    flowerRepository.save(flower);
-  }
+    public void addFlower(Flower flower) {
+        flowerRepository.save(flower);
+    }
 }
